@@ -8,19 +8,11 @@ interface MyButtonProps {
 
 export const MyButton = ({ onPress, text }: MyButtonProps) => {
   return (
-    <TouchableOpacity style={styles.container} onPress={onPress}>
-      <Text style={styles.text}>{text}</Text>
+    <TouchableOpacity
+      className=" items-center justify-center bg-blue-500 p-4 rounded-md"
+      onPress={onPress}
+    >
+      <Text className="text-black">{text}</Text>
     </TouchableOpacity>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    paddingHorizontal: 32,
-    paddingVertical: 8,
-    backgroundColor: "blue",
-    alignSelf: "flex-start",
-    borderRadius: 8,
-  },
-  text: { color: "white", fontSize: 16, fontWeight: "bold" },
-});
